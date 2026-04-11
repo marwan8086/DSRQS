@@ -24,7 +24,7 @@ Please ensure compliance with the following dataset licenses:
 
 - **Orphanet**  CC BY 4.0  
 - **DisGeNET**  CC BY-NC-SA 4.0  
-- **OMIM** — Requires an academic license  
+- **OMIM** Requires an academic license  
 
 ---
 
