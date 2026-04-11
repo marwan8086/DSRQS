@@ -14,7 +14,7 @@ To activate them:
 1. Add your dataset credentials in the configuration section  
 2. Uncomment the provided example calls  
 3. Replace `DATASETS[ds_name]` with your actual knowledge graph data  
-4. Run the model — core implementation (Cells 6–18) works without modification  
+4. Run the model core implementation (Cells 6–18) works without modification  
 
 ---
 
