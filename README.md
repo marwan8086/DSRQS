@@ -145,6 +145,20 @@ All experiments are reproducible with fixed seeds and documented hyperparameters
 
 ---
 
+
+## Development Environment Support
+
+The project provides two official execution environments to ensure reproducibility and accessibility:
+
+- Google Colab implementation for cloud-based execution and rapid experimentation.
+- Visual Studio Code implementation for local deployment and full pipeline execution.
+
+The Visual Studio Code version requires access to a computational server (or local GPU-enabled environment) in both cases, due to the resource demands of knowledge graph processing and multi-hop inference.
+
+Both implementations are fully consistent with the core methodology and produce identical experimental outputs under the same configuration.
+
+---
+
 ## Citation
 
 Dhifallah & Liu. Depth-Stratified Relation-Query Scoring (DSRQS): Eliminating Position-Conflation Error in Biomedical KG-RAG Systems.
