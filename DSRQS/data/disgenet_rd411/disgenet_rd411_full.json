@@ -1,0 +1,18 @@
+[
+  {
+    "qid": 0,
+    "query": "Which genes are associated with Alzheimer disease?",
+    "intent": "Gene",
+    "dataset": "disgenet",
+    "gold_paths": [
+      [
+        ["Alzheimer", "associated_gene", "APP"]
+      ]
+    ],
+    "relations": [
+      {"r": "associated_gene", "hop": 1, "label": 1},
+      {"r": "causal_gene", "hop": 1, "label": 0},
+      {"r": "treats", "hop": 1, "label": 0}
+    ]
+  }
+]

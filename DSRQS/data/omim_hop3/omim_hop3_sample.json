@@ -1,0 +1,63 @@
+[
+  {
+    "qid": 0,
+    "query": "What facial dysmorphisms are associated with the allelic variant underlying Smith-Lemli-Opitz syndrome?",
+    "intent": "Phenotype",
+    "dataset": "omim_hop3",
+    "gold_paths": [
+      [
+        ["Smith-Lemli-Opitz", "causal_gene",        "DHCR7"],
+        ["DHCR7",             "allelic_variant_of",  "R352W"],
+        ["R352W",             "has_phenotype",        "Microcephaly"]
+      ]
+    ],
+    "relations": [
+      {"r": "causal_gene",        "hop": 1, "label": 1},
+      {"r": "allelic_variant_of", "hop": 2, "label": 1},
+      {"r": "has_phenotype",      "hop": 3, "label": 1},
+      {"r": "expressed_in",       "hop": 1, "label": 0},
+      {"r": "expressed_in",       "hop": 2, "label": 1},
+      {"r": "treats",             "hop": 1, "label": 0}
+    ]
+  },
+  {
+    "qid": 1,
+    "query": "Through which cellular pathway does the protein product of the causal gene of Fanconi anaemia D1 exert its pathogenic effect?",
+    "intent": "Gene-Function",
+    "dataset": "omim_hop3",
+    "gold_paths": [
+      [
+        ["Fanconi_anaemia_D1", "causal_gene",    "BRCA2"],
+        ["BRCA2",              "participates_in", "HR_repair"],
+        ["HR_repair",          "required_for",    "HSC_maintenance"]
+      ]
+    ],
+    "relations": [
+      {"r": "causal_gene",                "hop": 1, "label": 1},
+      {"r": "participates_in",            "hop": 2, "label": 1},
+      {"r": "required_for",               "hop": 3, "label": 1},
+      {"r": "expressed_in",               "hop": 1, "label": 0},
+      {"r": "phenotypic_series_component","hop": 2, "label": 1}
+    ]
+  },
+  {
+    "qid": 2,
+    "query": "What targeted therapy exploits the molecular mechanism of Gaucher disease type 1?",
+    "intent": "Treatment",
+    "dataset": "omim_hop3",
+    "gold_paths": [
+      [
+        ["Gaucher_disease_type_1", "causal_gene",    "GBA"],
+        ["GBA",                    "encodes_enzyme",  "Glucocerebrosidase"],
+        ["Glucocerebrosidase",     "targeted_by",     "Imiglucerase"]
+      ]
+    ],
+    "relations": [
+      {"r": "causal_gene",    "hop": 1, "label": 1},
+      {"r": "encodes_enzyme", "hop": 2, "label": 1},
+      {"r": "targeted_by",    "hop": 3, "label": 1},
+      {"r": "has_phenotype",  "hop": 1, "label": 0},
+      {"r": "expressed_in",   "hop": 2, "label": 1}
+    ]
+  }
+]

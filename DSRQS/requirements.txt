@@ -1,0 +1,33 @@
+# =============================================================================
+# Author: Marwan Dhifallah
+# Email:  marwan@mail.dlut.edu.cn
+# Affiliation: Dalian University of Technology
+#
+# Description:
+#   This file is part of the DSRQS framework for multi-hop reasoning over
+#   biomedical knowledge graphs and retrieval-augmented generation (RAG).
+#
+# Copyright (c) 2026
+# =============================================================================
+# Knowledge Graph tooling
+rdflib>=7.0.0        # https://github.com/RDFLib/rdflib
+pandas>=2.0.0        # https://pandas.pydata.org
+requests>=2.31.0     # https://requests.readthedocs.io/
+torch==2.1.2
+dgl==2.1.0
+transformers==4.36.2
+scikit-learn==1.3.2
+peft==0.7.1
+networkx==3.2.1
+sentence-transformers==2.3.1
+pandas==2.1.4
+pyyaml==6.0.1
+tqdm==4.66.1
+pytest==7.4.4
+requests==2.31.0
+# Data source documentation:
+# OMIM: https://omim.org/downloads
+# Orphanet ORDO: https://www.orphadata.com/data/ORDO/
+# DisGeNET: https://www.disgenet.org/downloads
+
+
