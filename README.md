@@ -180,7 +180,7 @@ It is intended to be integrated as a component within larger KG-RAG systems.
 ## Citation
 
 Dhifallah, M., & Liu.  
-*Depth-Stratified Relation–Query Scoring (DSRQS): Eliminating Position-Conflation Error in Multi-Hop Biomedical KG Retrieval.*
+*Depth-Stratified Relation-Query Scoring (DSRQS): Eliminating Position-Conflation Error in Multi-Hop Biomedical KG Retrieval.*
 
 ---
 
