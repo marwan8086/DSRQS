@@ -1,32 +1,38 @@
-# Depth-Stratified Relation-Query Scoring (DSRQS)
+# Depth-Stratified Relation–Query Scoring (DSRQS)
 
 ## Overview
 
-DSRQS is a depth-aware relation filtering framework designed to eliminate the Position-Conflation Error (PCE) in multi-hop Knowledge Graph Retrieval-Augmented Generation (KG-RAG) systems for biomedical applications.
+DSRQS is a depth-stratified relation filtering framework designed to eliminate the **Position-Conflation Error (PCE)** in multi-hop biomedical knowledge graph retrieval.
 
-The core issue addressed is that relation relevance is not invariant across graph depth, yet most existing models assume depth-invariant scoring, leading to structural reasoning errors in multi-hop biomedical inference.
+The method targets a fundamental limitation in existing relation filtering approaches:  
+**relation relevance is not invariant across hop depth**, yet most models assume depth-invariant scoring.  
+This mismatch leads to structural reasoning errors in multi-hop inference.
+
+Importantly, DSRQS operates strictly at the **retrieval (relation-filtering) level** within KG-RAG pipelines and does not include answer generation.
 
 ---
 
 ## Problem Definition
 
-We define the Position-Conflation Error (PCE) as a structural failure mode where a relation is assigned identical relevance scores across different hop depths despite having different semantic roles.
+The **Position-Conflation Error (PCE)** arises when a relation type is assigned identical relevance across different hop depths despite having distinct semantic roles.
 
-Empirical findings:
-- 49.3% of relation types change relevance across hops
-- 35–41% of filtering errors in state-of-the-art systems are due to PCE
-- Depth-agnostic models suffer a provable information-theoretic loss when I(Y; L | Q, R) > 0
+Empirical observations:
+
+- 49.3% of relation types change relevance across hops  
+- 35–41% of filtering errors in state-of-the-art systems are attributable to PCE  
+- Depth-agnostic models incur provable information loss when  
+  I(Y; L | Q, R) > 0  
 
 ---
 
 ## Contributions
 
-- Formal definition and theoretical grounding of Position-Conflation Error
-- Depth-stratified relation scoring via LoRA decomposition
-- Depth-contrastive learning objective for hop-aware separation
-- Path-Coherence Score (PCS) as a structural evaluation metric
-- OMIM-Hop3 benchmark for 3-hop rare disease reasoning
-- Theoretical guarantees on PCS lower bound and structural inferiority of depth-agnostic models
+- Formal definition and theoretical characterization of PCE  
+- Depth-stratified relation scoring via LoRA-based decomposition  
+- Depth-contrastive learning objective for hop-aware discrimination  
+- Path-Coherence Score (PCS) for evaluating structural reasoning integrity  
+- OMIM-Hop3 benchmark for 3-hop rare disease reasoning  
+- Theoretical guarantees on PCS lower bounds and structural inferiority of depth-agnostic filters  
 
 ---
 
@@ -41,131 +47,144 @@ qᵀ (W₀ + A_ℓ B_ℓᵀ) e_r
 )
 
 Where:
-- W₀: shared base interaction matrix
-- A_ℓ, B_ℓ: low-rank depth-specific adaptation (LoRA)
-- v: Hadamard interaction vector
-- b_ℓ: depth bias
-- q, e_r: normalized embeddings
+
+- W₀: shared base interaction matrix  
+- A_ℓ, B_ℓ: low-rank depth-specific adaptation (LoRA)  
+- v: Hadamard interaction vector  
+- b_ℓ: depth-specific bias  
+- q, e_r: ℓ2-normalized embeddings  
 
 ---
 
 ## Architecture
 
-- Frozen biomedical encoder (BioLinkBERT-Large)
-- Depth router selecting (A_ℓ, B_ℓ, b_ℓ)
-- LoRA-based bilinear interaction per depth
-- Hadamard interaction component
-- Sigmoid scoring with threshold filtering
+- Frozen biomedical encoder (**BioLinkBERT-Large**)  
+- Depth router selecting (A_ℓ, B_ℓ, b_ℓ)  
+- Depth-stratified bilinear interaction (LoRA-based)  
+- Hadamard interaction component  
+- Sigmoid scoring with threshold-based filtering  
 
 ---
 
 ## Datasets
 
-Orphanet:
-- Rare disease ontology
-- CC BY 4.0
+- **Orphanet**  
+  Rare disease knowledge base (CC BY 4.0)
 
-DisGeNET:
-- Gene-disease associations
-- CC BY-NC-SA 4.0
+- **DisGeNET**  
+  Gene–disease association graph (CC BY-NC-SA 4.0)
 
-OMIM:
-- Mendelian disease knowledge graph
-- Academic licensed dataset
+- **OMIM**  
+  Mendelian disease knowledge base (academic license required)
 
-OMIM-Hop3 Benchmark:
-- 183 curated 3-hop reasoning instances
-- Expert-validated gold paths
+- **OMIM-Hop3 Benchmark**  
+  - 183 curated 3-hop reasoning instances  
+  - Expert-validated gold paths  
 
 ---
 
 ## Training Setup
 
-- Encoder: BioLinkBERT-Large (frozen)
-- LoRA rank: 16
-- Optimizer: Adam
-- Learning rate: 5e-4
-- Loss: Cross-Entropy + Depth-Contrastive Loss
-- Margin: 0.25
-- Threshold: 0.5
-- Evaluation: 5-fold cross-validation × 5 seeds
-- Hardware: NVIDIA A100 80GB
+- Encoder: BioLinkBERT-Large (frozen)  
+- LoRA rank: 16  
+- Optimizer: Adam  
+- Learning rate: 5 × 10⁻⁴  
+- Loss: Cross-Entropy + Depth-Contrastive Loss  
+- Margin γ: 0.25  
+- Threshold θ: 0.5  
+- Evaluation: 5-fold cross-validation × 5 seeds  
+- Hardware: NVIDIA A100 (80GB)  
 
 ---
 
 ## Results
 
-DSRQS achieves:
+DSRQS demonstrates:
 
-- Higher Path-Coherence Score (PCS)
-- Significant reduction in hallucination rate
-- Strong improvements over cosine, bilinear, and contrastive baselines
-- Stable performance across Orphanet, DisGeNET, and OMIM-Hop3
+- Significant improvements in **Path-Coherence Score (PCS)**  
+- Reduction in hallucination rate  
+- Consistent gains over cosine, bilinear, and contrastive baselines  
+- Stable performance across Orphanet, DisGeNET, and OMIM-Hop3  
 
-Key observation:
-PCS is strongly anti-correlated with hallucination (ρ ≈ −0.96)
+Key finding:
+
+- PCS exhibits strong negative correlation with hallucination  
+  (Spearman ρ ≈ −0.96)
 
 ---
 
-## Ablation
+## Ablation Study
 
-- Removing LoRA reduces performance significantly
-- Removing depth-contrastive loss yields equivalent degradation
-- Depth stratification is the dominant factor in performance gain
-- Model is robust to moderate LoRA rank variation
+- Removing LoRA reduces performance significantly  
+- Removing depth-contrastive loss results in comparable degradation  
+- Depth stratification is the dominant performance factor  
+- Model remains robust across moderate LoRA rank variations  
 
 ---
 
 ## Theoretical Insights
 
-- Depth-agnostic filtering is suboptimal under I(Y; L | Q, R) > 0
-- PCE introduces multiplicative degradation across hops
-- PCS lower bound scales as product of per-depth recall probabilities
-- Structural inferiority theorem proves strict dominance of depth-aware filtering
+- Depth-agnostic filtering is suboptimal when I(Y; L | Q, R) > 0  
+- PCE induces multiplicative degradation across hops  
+- PCS lower bound scales as the product of per-depth recall  
+- Structural Inferiority Theorem proves dominance of depth-aware filtering  
 
 ---
 
 ## Limitations
 
-- Fixed maximum reasoning depth (L = 3)
-- Uniform depth treatment across heterogeneous graph topology
-- Annotation cost for gold-path construction
-- Evaluation limited to single biomedical KG setting
+- Fixed maximum reasoning depth (L = 3)  
+- Uniform treatment across heterogeneous graph topology  
+- High annotation cost for gold-path construction  
+- Evaluation limited to single-KG biomedical setting  
 
 ---
 
 ## Reproducibility
 
-- Python 3.10
-- PyTorch 2.1
-- CUDA 12.1
-- Transformers 4.36
+- Python 3.10  
+- PyTorch 2.1  
+- CUDA 12.1  
+- Transformers 4.36  
 
-All experiments are reproducible with fixed seeds and documented hyperparameters.
+All experiments are fully reproducible with fixed seeds and documented hyperparameters.
 
 ---
 
+## Development Environments
 
-## Development Environment Support
+The project supports two official execution environments:
 
-The project provides two official execution environments to ensure reproducibility and accessibility:
+- **Google Colab**  
+  For cloud-based execution and rapid experimentation  
 
-- Google Colab implementation for cloud-based execution and rapid experimentation.
-- Visual Studio Code implementation for local deployment and full pipeline execution.
+- **Visual Studio Code (Local Setup)**  
+  For full pipeline execution and reproducible experimentation  
 
-The Visual Studio Code version requires access to a computational server (or local GPU-enabled environment) in both cases, due to the resource demands of knowledge graph processing and multi-hop inference.
+Note:  
+Both setups require access to a computational backend (GPU-enabled environment or server), due to the computational demands of multi-hop knowledge graph processing.
 
-Both implementations are fully consistent with the core methodology and produce identical experimental outputs under the same configuration.
+Both implementations are fully consistent and yield identical results under the same configuration.
+
+---
+
+## Scope Clarification
+
+DSRQS is a **retrieval-layer method** and does not perform answer generation.
+
+The framework focuses exclusively on **depth-aware relation filtering** and evaluates structural reasoning quality using PCS and edge-level metrics.  
+It is intended to be integrated as a component within larger KG-RAG systems.
 
 ---
 
 ## Citation
 
-Dhifallah & Liu. Depth-Stratified Relation-Query Scoring (DSRQS): Eliminating Position-Conflation Error in Biomedical KG-RAG Systems.
+Dhifallah, M., & Liu.  
+*Depth-Stratified Relation–Query Scoring (DSRQS): Eliminating Position-Conflation Error in Multi-Hop Biomedical KG Retrieval.*
 
 ---
 
 ## License
 
-Code: MIT License  
-Data: Subject to Orphanet, DisGeNET, and OMIM licensing terms
+- Code: MIT License  
+- Data: Subject to Orphanet, DisGeNET, and OMIM licensing terms  
