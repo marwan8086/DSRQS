@@ -1,4 +1,4 @@
-# Depth-Stratified Relation–Query Scoring (DSRQS)
+# Depth-Stratified Relation-Query Scoring (DSRQS)
 
 ## Overview
 
