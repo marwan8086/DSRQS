@@ -1,0 +1,3452 @@
+[
+  {
+    "qid": 0,
+    "query": "Through what mechanism does DMD cause Beta Thalassemia?",
+    "intent": "Gene-Function",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Beta Thalassemia",
+          "causal_gene",
+          "DMD"
+        ]
+      ],
+      [
+        [
+          "DMD",
+          "participates_in",
+          "Protein Synthesis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 1,
+    "query": "What are the main symptoms of Huntington Disease?",
+    "intent": "Phenotype",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Huntington Disease",
+          "causal_gene",
+          "SMPD1"
+        ]
+      ],
+      [
+        [
+          "SMPD1",
+          "participates_in",
+          "Lipid Metabolism"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 2,
+    "query": "What are the main symptoms of Beta Thalassemia?",
+    "intent": "Phenotype",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Beta Thalassemia",
+          "causal_gene",
+          "FANCD1"
+        ]
+      ],
+      [
+        [
+          "FANCD1",
+          "participates_in",
+          "Cell Migration"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 3,
+    "query": "What is the genetic basis of Hemophilia A?",
+    "intent": "Etiology",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Hemophilia A",
+          "causal_gene",
+          "HBB"
+        ]
+      ],
+      [
+        [
+          "HBB",
+          "participates_in",
+          "Lipid Metabolism"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 4,
+    "query": "Through what mechanism does SMPD1 cause Huntington Disease?",
+    "intent": "Gene-Function",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Huntington Disease",
+          "causal_gene",
+          "SMPD1"
+        ]
+      ],
+      [
+        [
+          "SMPD1",
+          "participates_in",
+          "Glycosylation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 5,
+    "query": "What gene causes Huntington Disease?",
+    "intent": "Gene",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Huntington Disease",
+          "causal_gene",
+          "CFTR"
+        ]
+      ],
+      [
+        [
+          "CFTR",
+          "participates_in",
+          "Protein Synthesis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 6,
+    "query": "What is a targeted therapy for Marfan Syndrome?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Marfan Syndrome",
+          "causal_gene",
+          "F8"
+        ]
+      ],
+      [
+        [
+          "F8",
+          "participates_in",
+          "Protein Synthesis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 7,
+    "query": "What are the main symptoms of Marfan Syndrome?",
+    "intent": "Phenotype",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Marfan Syndrome",
+          "causal_gene",
+          "SNCA"
+        ]
+      ],
+      [
+        [
+          "SNCA",
+          "participates_in",
+          "Apoptosis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 8,
+    "query": "What are the main symptoms of Beta Thalassemia?",
+    "intent": "Phenotype",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Beta Thalassemia",
+          "causal_gene",
+          "FBN1"
+        ]
+      ],
+      [
+        [
+          "FBN1",
+          "participates_in",
+          "Proteasomal Degradation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 9,
+    "query": "What are the main symptoms of Marfan Syndrome?",
+    "intent": "Phenotype",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Marfan Syndrome",
+          "causal_gene",
+          "SMPD1"
+        ]
+      ],
+      [
+        [
+          "SMPD1",
+          "participates_in",
+          "Protein Synthesis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 10,
+    "query": "What gene causes Gaucher Disease?",
+    "intent": "Gene",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Gaucher Disease",
+          "causal_gene",
+          "APOE"
+        ]
+      ],
+      [
+        [
+          "APOE",
+          "participates_in",
+          "Glycosylation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 11,
+    "query": "What is a targeted therapy for Huntington Disease?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Huntington Disease",
+          "causal_gene",
+          "SMN1"
+        ]
+      ],
+      [
+        [
+          "SMN1",
+          "participates_in",
+          "Lipid Metabolism"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 12,
+    "query": "Through what mechanism does GALC cause Beta Thalassemia?",
+    "intent": "Gene-Function",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Beta Thalassemia",
+          "causal_gene",
+          "GALC"
+        ]
+      ],
+      [
+        [
+          "GALC",
+          "participates_in",
+          "Proteasomal Degradation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 13,
+    "query": "What is the genetic basis of Gaucher Disease?",
+    "intent": "Etiology",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Gaucher Disease",
+          "causal_gene",
+          "SMPD1"
+        ]
+      ],
+      [
+        [
+          "SMPD1",
+          "participates_in",
+          "Lipid Metabolism"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 14,
+    "query": "What is a targeted therapy for Hemophilia A?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Hemophilia A",
+          "causal_gene",
+          "FBN1"
+        ]
+      ],
+      [
+        [
+          "FBN1",
+          "participates_in",
+          "Apoptosis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 15,
+    "query": "What is a targeted therapy for Gaucher Disease?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Gaucher Disease",
+          "causal_gene",
+          "APOE"
+        ]
+      ],
+      [
+        [
+          "APOE",
+          "participates_in",
+          "Proteasomal Degradation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 16,
+    "query": "Through what mechanism does SNCA cause Marfan Syndrome?",
+    "intent": "Gene-Function",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Marfan Syndrome",
+          "causal_gene",
+          "SNCA"
+        ]
+      ],
+      [
+        [
+          "SNCA",
+          "participates_in",
+          "Cell Migration"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 17,
+    "query": "What gene causes Cystic Fibrosis?",
+    "intent": "Gene",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Cystic Fibrosis",
+          "causal_gene",
+          "CFTR"
+        ]
+      ],
+      [
+        [
+          "CFTR",
+          "participates_in",
+          "Glycosylation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 18,
+    "query": "What is a targeted therapy for Beta Thalassemia?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Beta Thalassemia",
+          "causal_gene",
+          "GBA"
+        ]
+      ],
+      [
+        [
+          "GBA",
+          "participates_in",
+          "Protein Synthesis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 19,
+    "query": "What gene causes Beta Thalassemia?",
+    "intent": "Gene",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Beta Thalassemia",
+          "causal_gene",
+          "SNCA"
+        ]
+      ],
+      [
+        [
+          "SNCA",
+          "participates_in",
+          "Lipid Metabolism"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 20,
+    "query": "What is the genetic basis of Hemophilia A?",
+    "intent": "Etiology",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Hemophilia A",
+          "causal_gene",
+          "HTT"
+        ]
+      ],
+      [
+        [
+          "HTT",
+          "participates_in",
+          "Glycosylation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 21,
+    "query": "What gene causes Cystic Fibrosis?",
+    "intent": "Gene",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Cystic Fibrosis",
+          "causal_gene",
+          "HBB"
+        ]
+      ],
+      [
+        [
+          "HBB",
+          "participates_in",
+          "Proteasomal Degradation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 22,
+    "query": "What is a targeted therapy for Gaucher Disease?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Gaucher Disease",
+          "causal_gene",
+          "GBA"
+        ]
+      ],
+      [
+        [
+          "GBA",
+          "participates_in",
+          "Glycosylation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 23,
+    "query": "What is a targeted therapy for Cystic Fibrosis?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Cystic Fibrosis",
+          "causal_gene",
+          "DMD"
+        ]
+      ],
+      [
+        [
+          "DMD",
+          "participates_in",
+          "Cell Migration"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 24,
+    "query": "Through what mechanism does HBB cause Duchenne Muscular Dystrophy?",
+    "intent": "Gene-Function",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Duchenne Muscular Dystrophy",
+          "causal_gene",
+          "HBB"
+        ]
+      ],
+      [
+        [
+          "HBB",
+          "participates_in",
+          "Proteasomal Degradation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 25,
+    "query": "What gene causes Huntington Disease?",
+    "intent": "Gene",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Huntington Disease",
+          "causal_gene",
+          "FANCD1"
+        ]
+      ],
+      [
+        [
+          "FANCD1",
+          "participates_in",
+          "Glycosylation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 26,
+    "query": "Through what mechanism does SMPD1 cause Duchenne Muscular Dystrophy?",
+    "intent": "Gene-Function",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Duchenne Muscular Dystrophy",
+          "causal_gene",
+          "SMPD1"
+        ]
+      ],
+      [
+        [
+          "SMPD1",
+          "participates_in",
+          "DNA Repair"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 27,
+    "query": "What is a targeted therapy for Cystic Fibrosis?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Cystic Fibrosis",
+          "causal_gene",
+          "SMN1"
+        ]
+      ],
+      [
+        [
+          "SMN1",
+          "participates_in",
+          "DNA Repair"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 28,
+    "query": "What is a targeted therapy for Beta Thalassemia?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Beta Thalassemia",
+          "causal_gene",
+          "F8"
+        ]
+      ],
+      [
+        [
+          "F8",
+          "participates_in",
+          "Glycosylation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 29,
+    "query": "What is a targeted therapy for Beta Thalassemia?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Beta Thalassemia",
+          "causal_gene",
+          "DMD"
+        ]
+      ],
+      [
+        [
+          "DMD",
+          "participates_in",
+          "Lipid Metabolism"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 30,
+    "query": "What is a targeted therapy for Duchenne Muscular Dystrophy?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Duchenne Muscular Dystrophy",
+          "causal_gene",
+          "CFTR"
+        ]
+      ],
+      [
+        [
+          "CFTR",
+          "participates_in",
+          "Cell Migration"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 31,
+    "query": "What are the main symptoms of Beta Thalassemia?",
+    "intent": "Phenotype",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Beta Thalassemia",
+          "causal_gene",
+          "F8"
+        ]
+      ],
+      [
+        [
+          "F8",
+          "participates_in",
+          "Apoptosis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 32,
+    "query": "What are the main symptoms of Beta Thalassemia?",
+    "intent": "Phenotype",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Beta Thalassemia",
+          "causal_gene",
+          "SNCA"
+        ]
+      ],
+      [
+        [
+          "SNCA",
+          "participates_in",
+          "Apoptosis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 33,
+    "query": "Through what mechanism does GALC cause Cystic Fibrosis?",
+    "intent": "Gene-Function",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Cystic Fibrosis",
+          "causal_gene",
+          "GALC"
+        ]
+      ],
+      [
+        [
+          "GALC",
+          "participates_in",
+          "Protein Synthesis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 34,
+    "query": "What is the genetic basis of Huntington Disease?",
+    "intent": "Etiology",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Huntington Disease",
+          "causal_gene",
+          "DMD"
+        ]
+      ],
+      [
+        [
+          "DMD",
+          "participates_in",
+          "Proteasomal Degradation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 35,
+    "query": "What is the genetic basis of Gaucher Disease?",
+    "intent": "Etiology",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Gaucher Disease",
+          "causal_gene",
+          "SMPD1"
+        ]
+      ],
+      [
+        [
+          "SMPD1",
+          "participates_in",
+          "Protein Synthesis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 36,
+    "query": "What is a targeted therapy for Gaucher Disease?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Gaucher Disease",
+          "causal_gene",
+          "SMPD1"
+        ]
+      ],
+      [
+        [
+          "SMPD1",
+          "participates_in",
+          "Glycosylation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 37,
+    "query": "What are the main symptoms of Cystic Fibrosis?",
+    "intent": "Phenotype",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Cystic Fibrosis",
+          "causal_gene",
+          "HTT"
+        ]
+      ],
+      [
+        [
+          "HTT",
+          "participates_in",
+          "DNA Repair"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 38,
+    "query": "What are the main symptoms of Duchenne Muscular Dystrophy?",
+    "intent": "Phenotype",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Duchenne Muscular Dystrophy",
+          "causal_gene",
+          "SMN1"
+        ]
+      ],
+      [
+        [
+          "SMN1",
+          "participates_in",
+          "Lipid Metabolism"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 39,
+    "query": "What gene causes Marfan Syndrome?",
+    "intent": "Gene",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Marfan Syndrome",
+          "causal_gene",
+          "SNCA"
+        ]
+      ],
+      [
+        [
+          "SNCA",
+          "participates_in",
+          "Glycosylation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 40,
+    "query": "Through what mechanism does F8 cause Hemophilia A?",
+    "intent": "Gene-Function",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Hemophilia A",
+          "causal_gene",
+          "F8"
+        ]
+      ],
+      [
+        [
+          "F8",
+          "participates_in",
+          "Proteasomal Degradation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 41,
+    "query": "What is a targeted therapy for Beta Thalassemia?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Beta Thalassemia",
+          "causal_gene",
+          "SMN1"
+        ]
+      ],
+      [
+        [
+          "SMN1",
+          "participates_in",
+          "Glycosylation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 42,
+    "query": "What are the main symptoms of Cystic Fibrosis?",
+    "intent": "Phenotype",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Cystic Fibrosis",
+          "causal_gene",
+          "F8"
+        ]
+      ],
+      [
+        [
+          "F8",
+          "participates_in",
+          "DNA Repair"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 43,
+    "query": "Through what mechanism does GALC cause Hemophilia A?",
+    "intent": "Gene-Function",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Hemophilia A",
+          "causal_gene",
+          "GALC"
+        ]
+      ],
+      [
+        [
+          "GALC",
+          "participates_in",
+          "Apoptosis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 44,
+    "query": "What is the genetic basis of Huntington Disease?",
+    "intent": "Etiology",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Huntington Disease",
+          "causal_gene",
+          "HBB"
+        ]
+      ],
+      [
+        [
+          "HBB",
+          "participates_in",
+          "Apoptosis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 45,
+    "query": "Through what mechanism does GBA cause Hemophilia A?",
+    "intent": "Gene-Function",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Hemophilia A",
+          "causal_gene",
+          "GBA"
+        ]
+      ],
+      [
+        [
+          "GBA",
+          "participates_in",
+          "Proteasomal Degradation"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 46,
+    "query": "What are the main symptoms of Cystic Fibrosis?",
+    "intent": "Phenotype",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Cystic Fibrosis",
+          "causal_gene",
+          "CFTR"
+        ]
+      ],
+      [
+        [
+          "CFTR",
+          "participates_in",
+          "Protein Synthesis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "participates_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 47,
+    "query": "What is a targeted therapy for Hemophilia A?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Hemophilia A",
+          "causal_gene",
+          "SMN1"
+        ]
+      ],
+      [
+        [
+          "SMN1",
+          "participates_in",
+          "Apoptosis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 1
+      }
+    ]
+  },
+  {
+    "qid": 48,
+    "query": "What is a targeted therapy for Gaucher Disease?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Gaucher Disease",
+          "causal_gene",
+          "HTT"
+        ]
+      ],
+      [
+        [
+          "HTT",
+          "participates_in",
+          "Protein Synthesis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "expressed_in",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "phenotype",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "targets",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  },
+  {
+    "qid": 49,
+    "query": "What is a targeted therapy for Duchenne Muscular Dystrophy?",
+    "intent": "Treatment",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        [
+          "Duchenne Muscular Dystrophy",
+          "causal_gene",
+          "F8"
+        ]
+      ],
+      [
+        [
+          "F8",
+          "participates_in",
+          "Protein Synthesis"
+        ]
+      ]
+    ],
+    "relations": [
+      {
+        "r": "phenotype",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "causal_gene",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 1,
+        "label": 1
+      },
+      {
+        "r": "targets",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 2,
+        "label": 0
+      },
+      {
+        "r": "expressed_in",
+        "hop": 2,
+        "label": 1
+      },
+      {
+        "r": "associated_with",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "causal_gene",
+        "hop": 3,
+        "label": 0
+      },
+      {
+        "r": "participates_in",
+        "hop": 3,
+        "label": 0
+      }
+    ]
+  }
+]
