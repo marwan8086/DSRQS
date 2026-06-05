@@ -30,6 +30,9 @@ def validate_query_item(item: Dict[str, Any]) -> bool:
     for rel in item["relations"]:
         if not all(k in rel for k in ["r", "hop", "label"]):
             return False
+        if "h" in rel and "t" in rel:
+            if not rel["h"] or not rel["t"]:
+                return False
         if not isinstance(rel["hop"], int) or rel["hop"] < 0:
             return False
         if rel["label"] not in [0, 1]:
@@ -71,11 +74,16 @@ def fix_data_format(json_path: Path) -> List[Dict[str, Any]]:
                 rel["label"] = int(rel["label"])
             
             if rel.get("hop") is not None and rel.get("r") is not None:
-                valid_relations.append({
+                entry = {
                     "r": str(rel["r"]),
                     "hop": int(rel["hop"]),
-                    "label": int(rel["label"])
-                })
+                    "label": int(rel["label"]),
+                }
+                if rel.get("h") is not None:
+                    entry["h"] = str(rel["h"])
+                if rel.get("t") is not None:
+                    entry["t"] = str(rel["t"])
+                valid_relations.append(entry)
         
         item["relations"] = valid_relations
         

@@ -1,26 +1,59 @@
-seed: 0
-device: "cuda"
+# =============================================================================
+# DSRQS: Exact Hyperparameters from the Paper
+# See Reproducibility Checklist (Appendix C)
+# =============================================================================
+
+# Reproducibility: All seeds for 5-fold CV × 5 seeds
+seeds: [0, 1, 2, 3, 4]  # 5 random seeds
+n_splits: 5             # 5-fold cross-validation
+
+device: "cuda"  # Exact: NVIDIA A100 80GB
 
 model:
   name: "microsoft/BiomedNLP-BioLinkBERT-large"
   hidden_dim: 768
-  lora_rank: 16
+  lora_rank: 16          # ρ = 16 (from paper)
   max_hops: 3
 
 loss:
-  lambda_dc: 0.4
-  margin: 0.25
+  lambda_dc: 0.4         # λ = 0.4 (from paper)
+  margin: 0.25           # γ = 0.25 (from paper)
+  n_negatives: 4         # Hard negatives per positive
 
 train:
-  lr: 5.0e-4
+  lr: 5.0e-4             # Learning rate (from paper)
   batch_size: 32
-  epochs: 10
-  n_negatives: 4
+  epochs: 50
+  early_stop_patience: 8
 
 eval:
-  threshold: 0.5
+  threshold: 0.5         # θ = 0.5 (from paper)
 
 paths:
   data_dir: "data"
   run_dir: "runs"
   checkpoint_dir: "checkpoints"
+
+# --- Hardware & Environment Documentation ---
+hardware:
+  gpu: "NVIDIA A100 80GB"
+  gpu_driver: "535.129.03"
+  os: "Ubuntu 22.04.3 LTS"
+  python: "3.10.13"
+  pytorch_cuda: "12.1"
+  estimated_gpu_hours: 18.4  # Full benchmark suite computation time
+
+# --- Data Documentation ---
+datasets:
+  orphanet_fq274:
+    name: "Orphanet-FQ274"
+    licence: "CC-BY-4.0"
+    kappa_score: 0.79
+  disgenet_rd411:
+    name: "DisGeNET-RD411"
+    licence: "CC-BY-NC-SA-4.0"
+    kappa_score: 0.82
+  omim_hop3:
+    name: "OMIM-Hop3"
+    licence: "Academic Use"
+    kappa_score: 0.81

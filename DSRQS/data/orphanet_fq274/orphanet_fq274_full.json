@@ -1,0 +1,18 @@
+[
+  {
+    "qid": 0,
+    "query": "What gene is responsible for cystic fibrosis?",
+    "intent": "Gene",
+    "dataset": "orphanet",
+    "gold_paths": [
+      [
+        ["Cystic_Fibrosis", "causal_gene", "CFTR"]
+      ]
+    ],
+    "relations": [
+      {"r": "causal_gene", "hop": 1, "label": 1},
+      {"r": "associated_with", "hop": 1, "label": 0},
+      {"r": "expressed_in", "hop": 1, "label": 0}
+    ]
+  }
+]

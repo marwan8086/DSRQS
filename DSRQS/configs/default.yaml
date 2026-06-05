@@ -1,0 +1,26 @@
+seed: 0
+device: "cuda"
+
+model:
+  name: "microsoft/BiomedNLP-BioLinkBERT-large"
+  hidden_dim: 768
+  lora_rank: 16
+  max_hops: 3
+
+loss:
+  lambda_dc: 0.4
+  margin: 0.25
+
+train:
+  lr: 5.0e-4
+  batch_size: 32
+  epochs: 10
+  n_negatives: 4
+
+eval:
+  threshold: 0.5
+
+paths:
+  data_dir: "data"
+  run_dir: "runs"
+  checkpoint_dir: "checkpoints"
