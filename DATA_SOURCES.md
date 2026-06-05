@@ -5,7 +5,7 @@ All datasets are obtained through their official portals under academic or open 
 
 ---
 
-## 1. OMIM — Online Mendelian Inheritance in Man
+## 1. OMIM  Online Mendelian Inheritance in Man
 **Official website:**  
 https://omim.org/
 
