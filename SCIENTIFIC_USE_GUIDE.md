@@ -1,53 +1,91 @@
-# DSRQS Scientific Use Guide
+# DSRQS — A Beginner-Friendly Guide
 
-This guide explains how to use the DSRQS framework for conducting rigorous scientific experiments that meet high academic standards.
+This guide walks you through using DSRQS, step by step, in plain language. You don't
+need to be an expert in machine learning or statistics to follow along — anything
+technical is explained the first time it comes up.
+
+## What is DSRQS, in simple terms?
+
+DSRQS is a research method for working with **biomedical knowledge graphs** — large
+networks that connect medical concepts (like diseases, genes, and symptoms) with the
+relationships between them. The goal is to keep the *correct* connections and filter
+out the *wrong* ones.
+
+This repository gives you two things:
+
+1. **The method itself** (DSRQS), and
+2. **A toolkit** that runs experiments, measures how well the method performs, and
+   produces clean charts and tables you can put straight into a scientific paper.
+
+Everything is designed so your results can be **reproduced** — meaning anyone who runs
+the same commands gets the same numbers. That's a core requirement for trustworthy
+science.
 
 ## Table of Contents
 
-1. [Reproducibility](#reproducibility)
-2. [Statistical Analysis](#statistical-analysis)
-3. [Visualization](#visualization)
-4. [Full Workflow Example](#full-workflow-example)
+1. [Getting Started](#getting-started)
+2. [Running Your First Experiment](#running-your-first-experiment)
+3. [Understanding the Results](#understanding-the-results)
+4. [The Charts It Makes](#the-charts-it-makes)
+5. [A Full Walkthrough](#a-full-walkthrough)
+6. [What the Numbers Mean](#what-the-numbers-mean)
+7. [Tips & Troubleshooting](#tips--troubleshooting)
 
 ---
 
-## Reproducibility
+## Getting Started
 
-### 1. Preparing Data Splits
+Before running anything, install the tools the project depends on. Open a terminal in
+the project folder and run:
 
-First, prepare reproducible data splits:
+```bash
+pip install -r requirements.txt
+```
+
+This reads a list of required software packages and installs them for you. You only
+need to do this once.
+
+---
+
+## Running Your First Experiment
+
+There are three things you'll typically do, in order.
+
+### Step 1 — Prepare the data
 
 ```bash
 python main.py --dataset orphanet_fq274 --mode prepare_data
 ```
 
-This generates:
-- 5-fold cross-validation splits for all datasets
-- `data/split_info.json` file with full split documentation
+This splits your dataset into groups so the method can be tested fairly. It uses
+something called **5-fold cross-validation**: the data is divided into 5 equal parts,
+and the method is tested 5 times — each time using a different part for testing and the
+rest for training. Averaging across all 5 gives a more reliable score than testing just
+once. The split is saved to `data/split_info.json` so the exact same division can be
+reused later.
 
-### 2. Running Experiments
+### Step 2 — Run the experiment
 
-Run complete experiments:
+To run a single method and fully evaluate it:
 
 ```bash
-# Single variant with full evaluation
 python main.py --dataset orphanet_fq274 --variant dsrqs --mode full_eval --generate_plots
+```
 
-# All baselines (complete paper results)
+To run *all* the comparison methods at once (this reproduces the complete results from
+the paper):
+
+```bash
 python main.py --dataset orphanet_fq274 --mode all_baselines --generate_plots
 ```
 
-Each experiment saves:
-- Timestamped output directory
-- `experiment_metadata.json`: Full environment information
-- Training histories per fold
-- Checkpoints
-- Statistical analysis
-- Publication-quality plots (if `--generate_plots` is used)
+Adding `--generate_plots` tells the toolkit to also create the charts. Every run is
+saved into its own folder, stamped with the date and time, so nothing ever gets
+overwritten.
 
-### 3. Analyzing Existing Results
+### Step 3 — Re-analyze old results (optional)
 
-If you already have results from previous runs:
+If you already ran experiments before and just want to re-process them:
 
 ```bash
 python main.py --dataset orphanet_fq274 --mode analyze --results_dir ./results/your_experiment --generate_plots
@@ -55,21 +93,32 @@ python main.py --dataset orphanet_fq274 --mode analyze --results_dir ./results/y
 
 ---
 
-## Statistical Analysis
+## Understanding the Results
 
-The framework includes comprehensive statistical analysis tools:
+After a run, the toolkit doesn't just give you raw scores — it checks whether those
+scores are **statistically meaningful**. Here's what that involves, explained plainly.
 
-### 1. Confidence Intervals
-- 95% and 99% confidence intervals using t-distribution
-- Bootstrap confidence intervals (10,000 iterations)
+### Confidence intervals
 
-### 2. Statistical Tests
-- Wilcoxon signed-rank test for paired comparisons
-- Mann-Whitney U test for independent samples
-- Effect size calculation (Cohen's d)
+A confidence interval is a range that tells you how sure you can be about a result.
+Saying "the score is 0.85" is less honest than saying "the score is 0.85, and we're 95%
+confident the true value sits between 0.82 and 0.88." The toolkit reports these ranges
+automatically.
 
-### 3. Comparative Analysis
-Automatically compares all variants against a baseline (default: cosine):
+### Statistical tests
+
+When comparing two methods, a small difference might just be luck. Statistical tests
+estimate how likely that is. The key output is a **p-value**: a small p-value (commonly
+below 0.05) means the difference is probably real, not random chance.
+
+### Effect size
+
+A difference can be real but tiny. **Effect size** measures *how big* the difference is,
+not just whether it exists. Together, the p-value and effect size tell you whether one
+method is meaningfully better than another.
+
+The toolkit compares every method against a baseline and saves the verdict in a file,
+roughly like this:
 
 ```json
 {
@@ -77,8 +126,6 @@ Automatically compares all variants against a baseline (default: cosine):
   "metric": "PCS",
   "variants": {
     "dsrqs": {
-      "baseline_stats": {...},
-      "variant_stats": {...},
       "statistical_test": {
         "p_value": 0.001,
         "effect_size_r": 0.8,
@@ -89,97 +136,95 @@ Automatically compares all variants against a baseline (default: cosine):
 }
 ```
 
----
-
-## Visualization
-
-### 1. Publication-Quality Plots
-
-The framework generates the following plots in PDF format (high resolution):
-
-- **Comparison Plots**: Bar charts with confidence intervals for each metric
-- **Box Plots**: Distribution of results across all folds/seeds
-- **Training Curves**: Loss and metrics over epochs with mean ± std
-- **Correlation Plots**: Relationship between PCS and hallucination rate (H)
-
-All plots use:
-- Professional font (Arial)
-- Consistent styling
-- Appropriate color schemes
-- Clear labels and legends
+In plain words: this says DSRQS beat the baseline, the difference is very unlikely to be
+chance (`p_value` is tiny), the improvement is large (`effect_size_r` is high), and the
+result counts as significant.
 
 ---
 
-## Full Workflow Example
+## The Charts It Makes
 
-Here's a complete workflow from start to finish for a scientific paper:
+When you use `--generate_plots`, the toolkit produces ready-to-publish figures (saved as
+high-resolution PDFs):
 
-### Step 1: Setup Environment
+- **Comparison charts** — bar charts showing each method's score side by side, with the
+  confidence ranges drawn on top.
+- **Box plots** — a quick visual of how spread out the results were across all the test
+  runs.
+- **Training curves** — how the method improved over time as it learned.
+- **Correlation charts** — whether two things rise and fall together (for example, does a
+  higher quality score go hand in hand with fewer mistakes?).
+
+All charts share a clean, consistent style with clear labels — the kind you can drop
+directly into a paper.
+
+---
+
+## A Full Walkthrough
+
+Here's the whole process from start to finish:
+
 ```bash
-# Install dependencies
+# 1. Install everything
 pip install -r requirements.txt
-```
 
-### Step 2: Prepare Data
-```bash
+# 2. Prepare the data
 python main.py --dataset orphanet_fq274 --mode prepare_data
-```
 
-### Step 3: Run All Experiments
-```bash
-# This will run all variants and generate all statistics and plots
+# 3. Run all methods and generate charts + statistics
 python main.py --dataset orphanet_fq274 --mode all_baselines --generate_plots
 ```
 
-### Step 4: Examine Results
+When it finishes, you'll get a folder like this:
+
 ```
 results/
 └── orphanet_fq274_all_baselines_20260605_123456/
-    ├── experiment_metadata.json
-    ├── statistical_comparison.json
-    ├── results_table.tex
-    ├── figures/
+    ├── experiment_metadata.json    ← exactly how this run was set up
+    ├── statistical_comparison.json ← which method won, and by how much
+    ├── results_table.tex           ← a table ready to paste into a LaTeX paper
+    ├── figures/                    ← all the PDF charts
     │   ├── comparison_PCS.pdf
-    │   ├── comparison_F1.pdf
     │   ├── boxplot_PCS.pdf
     │   └── ...
-    ├── dsrqs/
-    │   ├── results.json
-    │   └── logs/
-    ├── b6/
-    └── ...
+    └── dsrqs/                      ← detailed results for each method
+        ├── results.json
+        └── logs/
 ```
 
-### Step 5: Use in Paper
-1. Copy the LaTeX table template and fill in your results
-2. Include the generated PDF figures directly in your paper
-3. Report the p-values and effect sizes from the statistical comparison
+To use it in a paper: paste the table from `results_table.tex`, drop in the PDF charts,
+and report the p-values and effect sizes from `statistical_comparison.json`.
 
 ---
 
-## Metrics Reported
+## What the Numbers Mean
 
-| Metric | Description | Interpretation |
-|--------|-------------|----------------|
-| PCS | Path Coherence Score | Higher = better (complete paths preserved) |
-| F1 | Edge F1-Score | Higher = better edge classification |
-| H | Hallucination Rate | Lower = fewer hallucinations |
-| Δα | Depth Awareness | Higher = better depth-aware scoring |
-| Latency | Inference time per edge | Lower = faster |
+| Metric | What it measures | Which direction is good? |
+|--------|------------------|--------------------------|
+| **PCS** (Path Coherence Score) | How well the method keeps complete, sensible chains of connections | Higher is better |
+| **F1** | How accurately it identifies correct connections | Higher is better |
+| **H** (Hallucination Rate) | How often it invents connections that aren't real | Lower is better |
+| **Δα** (Depth Awareness) | How well it accounts for how "deep" a connection sits in the graph | Higher is better |
+| **Latency** | How long it takes to process each connection | Lower is faster |
 
----
-
-## Tips for High-Quality Experiments
-
-1. **Use All Seeds**: Always run with 5 seeds (the default)
-2. **Generate Plots**: Use `--generate_plots` for publication-quality figures
-3. **Check Early Stopping**: The framework uses early stopping by default
-4. **Document Everything**: All metadata is automatically saved for reproducibility
+A "hallucination," in this context, is when the method confidently produces something
+that simply isn't true — a known weakness in many AI systems, which is exactly why
+measuring it matters.
 
 ---
 
-## Troubleshooting
+## Tips & Troubleshooting
 
-For issues and questions, refer to:
-- `QUICKSTART.md`: Basic usage
-- `IMPLEMENTATION_GUIDE.md`: Detailed implementation
+- **Run with all 5 seeds** (the default). A "seed" sets the random starting point; using
+  several and averaging makes your results far more trustworthy than a single lucky run.
+- **Always add `--generate_plots`** when you want publication-ready figures.
+- **Let early stopping do its job.** The toolkit automatically stops training once the
+  method stops improving, which saves time and avoids over-fitting (memorizing the data
+  instead of learning the pattern).
+- **Everything is documented for you.** Each run records its full setup, so you can
+  always reproduce or explain exactly what you did.
+
+If you get stuck, two other files can help:
+
+- `QUICKSTART.md` — the shortest possible path to running it.
+- `IMPLEMENTATION_GUIDE.md` — the deep technical details for developers.
