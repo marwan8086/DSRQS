@@ -5,7 +5,7 @@ All datasets are obtained through their official portals under academic or open 
 
 ---
 
-## 1. OMIM — Online Mendelian Inheritance in Man
+## 1. OMIM  Online Mendelian Inheritance in Man
 **Official website:**  
 https://omim.org/
 
@@ -22,7 +22,7 @@ OMIM data is not redistributed in this repository.
 
 ---
 
-## 2. Orphanet / ORDO — Orphanet Rare Disease Ontology
+## 2. Orphanet / ORDO  Orphanet Rare Disease Ontology
 **Official portal:**  
 https://www.orpha.net
 
@@ -42,7 +42,7 @@ Attribution required: “© Orphanet (www.orpha.net)”
 
 ---
 
-## 3. DisGeNET — Gene–Disease Associations Knowledge Graph
+## 3. DisGeNET  Gene–Disease Associations Knowledge Graph
 **Official website:**  
 https://www.disgenet.org/
 
