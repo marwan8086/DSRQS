@@ -1,9 +1,9 @@
 FROM nvidia/cuda:12.1.0-cudnn8-devel-ubuntu22.04
 
 LABEL maintainer="Marwan Dhifallah <marwan@mail.dlut.edu.cn>"
-LABEL description="Depth-Stratified Relation-Query Scoring (DSRQS) - Paper Implementation"
+LABEL description="Depth-Stratified Relation-Query Scoring (DSRQS)"
 LABEL repository="https://github.com/your-username/dsrqs"
-LABEL paper="https://arxiv.org/abs/XXXX.XXXXX"
+
 
 # Set non-interactive mode
 ENV DEBIAN_FRONTEND=noninteractive
