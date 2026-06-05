@@ -3,11 +3,7 @@
 # Email:  marwan@mail.dlut.edu.cn
 # Affiliation: Dalian University of Technology
 #
-# Description:
-#   Appendix D: Qualitative Case Study
-#   Demonstration of DSRQS on a Smith-Lemli-Opitz syndrome query
-#
-# Copyright (c) 2026
+# 
 # =============================================================================
 from __future__ import annotations
 import torch
