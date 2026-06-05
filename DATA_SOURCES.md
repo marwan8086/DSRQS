@@ -22,7 +22,7 @@ OMIM data is not redistributed in this repository.
 
 ---
 
-## 2. Orphanet / ORDO — Orphanet Rare Disease Ontology
+## 2. Orphanet / ORDO  Orphanet Rare Disease Ontology
 **Official portal:**  
 https://www.orpha.net
 
