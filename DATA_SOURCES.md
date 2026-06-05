@@ -42,7 +42,7 @@ Attribution required: “© Orphanet (www.orpha.net)”
 
 ---
 
-## 3. DisGeNET  Gene–Disease Associations Knowledge Graph
+## 3. DisGeNET  Gene Disease Associations Knowledge Graph
 **Official website:**  
 https://www.disgenet.org/
 
