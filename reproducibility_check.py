@@ -1,7 +1,3 @@
-# =============================================================================
-# Reproducibility Check Script for DSRQS
-# Verifies all requirements from the paper's Reproducibility Checklist (Appendix C)
-# =============================================================================
 from __future__ import annotations
 import sys
 import platform
